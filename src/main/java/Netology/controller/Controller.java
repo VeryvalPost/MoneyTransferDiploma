@@ -18,10 +18,14 @@ public class Controller {
 
 
     @PostMapping("/transfer")
-    public void transferToCard(@RequestBody TransferData transferData) {}
+    public void transferToCard(@RequestBody TransferData transferData) {
+        service.transfer(transferData);
+    }
 
     @PostMapping("/confirmOperation")
-    public void confirmOperation(@RequestBody ConfirmationData confirmationData) {}
+    public void confirmOperation(@RequestBody ConfirmationData confirmationData) {
+        service.confirmation(confirmationData);
+    }
 
 
 
