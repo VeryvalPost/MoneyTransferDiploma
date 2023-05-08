@@ -43,11 +43,13 @@ public class Service {
             transferAmount.setValue(transferAmount.getValue() + amount.getValue());
             //уменьшаем баланс исходной карты
             Amount decrease = repository.getCard(cardFromNumber).getBalance();
-            decrease.setValue(decrease.getValue() - amount.getValue());
-            LoggerClass.WriteLog("Balance " + cardToNumber + " increased by " +
-                    amount.getValue() + amount.getCurrency());
-            LoggerClass.WriteLog("From " + cardFromNumber + "\n" +
-                    "Current balance: " + repository.getCard(cardFromNumber).getBalance());
+            int percent = (int)(amount.getValue()*0.01);
+            decrease.setValue(decrease.getValue() - amount.getValue()-percent);
+            LoggerClass.WriteLog("\n" + "Balance " + cardToNumber + " increased by " +
+                    amount.getValue() + amount.getCurrency() + "\n" +
+                    "From " + cardFromNumber + "\n" +
+                    "Current balance: " + repository.getCard(cardFromNumber).getBalance() + "\n" +
+                    "Commission: " + percent);
 
         } else throw new TransferError("Transfer Error. Not enough money");
 
@@ -58,6 +60,9 @@ public class Service {
     public OperationID confirmation(ConfirmationData confirmationData) {
 
         boolean confSuccess = false;
+
+        // на стороне FRONT организована другая поцедура проверки. В данный момент приложение высылает по умолчанию код "0000"
+        /*
         for (OperationID elem : repository.transferMap.keySet()
         ) {
             if (elem.getId().equals(confirmationData.getOperationId())) {
@@ -65,6 +70,14 @@ public class Service {
                 LoggerClass.WriteLog("Confirm Success");
                 return repository.addConfirmationToRepo(confirmationData);
             }
+        }
+        */
+
+        // изменил проверк под конкретную задачу.
+
+        if (confirmationData.getCode().equals("0000")) {
+            confSuccess = true;
+            return repository.addConfirmationToRepo(confirmationData);
         }
 
         throw new ConfirmError("Confirm Error. Confirmation not exist");

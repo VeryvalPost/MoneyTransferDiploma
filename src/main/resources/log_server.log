@@ -1,1 +1,89 @@
-
+19. Mon May 08 18:34:03 MSK 2023:  New transfer
+20. Mon May 08 18:34:03 MSK 2023:  Balance 2222222222222222 increased by 100RUR
+21. Mon May 08 18:34:03 MSK 2023:  From 1111111111111111
+Current balance: Amount{value=4900, currency='RUR'}
+22. Mon May 08 18:34:03 MSK 2023:  Transfer ID - 0
+23. Mon May 08 18:34:03 MSK 2023:  New confirmation
+24. Mon May 08 18:34:03 MSK 2023:  Confirm Error. Confirmation not exist
+1. Mon May 08 18:41:54 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Mon May 08 18:41:54 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 18:42:36 MSK 2023:  New transfer
+4. Mon May 08 18:42:36 MSK 2023:  Balance 2222222222222222 increased by 500RUR
+5. Mon May 08 18:42:36 MSK 2023:  From 1111111111111111
+Current balance: Amount{value=4500, currency='RUR'}
+6. Mon May 08 18:42:36 MSK 2023:  Transfer ID - 0
+7. Mon May 08 18:42:36 MSK 2023:  New confirmation
+8. Mon May 08 18:42:36 MSK 2023:  Confirm Error. Confirmation not exist
+1. Mon May 08 18:43:38 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Mon May 08 18:43:38 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 18:43:44 MSK 2023:  New transfer
+4. Mon May 08 18:43:44 MSK 2023:  Balance 2222222222222222 increased by 500RUR
+5. Mon May 08 18:43:44 MSK 2023:  From 1111111111111111
+Current balance: Amount{value=4500, currency='RUR'}
+6. Mon May 08 18:43:44 MSK 2023:  Transfer ID - 0
+7. Mon May 08 18:43:44 MSK 2023:  New confirmation
+8. Mon May 08 18:43:44 MSK 2023:  Confirmation ID - 1
+1. Mon May 08 18:50:03 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Mon May 08 18:50:03 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 18:50:20 MSK 2023:  New transfer
+4. Mon May 08 18:50:20 MSK 2023:  Balance 2222222222222222 increased by 1000RUR
+5. Mon May 08 18:50:20 MSK 2023:  From 1111111111111111
+Current balance: Amount{value=3990, currency='RUR'}
+Commission: 10
+6. Mon May 08 18:50:20 MSK 2023:  Transfer ID - 0
+7. Mon May 08 18:50:20 MSK 2023:  New confirmation
+8. Mon May 08 18:50:20 MSK 2023:  Confirmation ID - 1
+1. Mon May 08 18:51:31 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Mon May 08 18:51:31 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 18:51:43 MSK 2023:  New transfer
+4. Mon May 08 18:51:43 MSK 2023:  
+Balance 2222222222222222 increased by 2000RUR
+From 1111111111111111
+Current balance: Amount{value=2980, currency='RUR'}
+Commission: 20
+5. Mon May 08 18:51:43 MSK 2023:  Transfer ID - 0
+6. Mon May 08 18:51:43 MSK 2023:  New confirmation
+7. Mon May 08 18:51:43 MSK 2023:  Confirmation ID - 1
+8. Mon May 08 18:52:43 MSK 2023:  New transfer
+9. Mon May 08 18:52:43 MSK 2023:  Card - 1111111111111111 not corrected
+10. Mon May 08 18:52:55 MSK 2023:  New transfer
+11. Mon May 08 18:52:55 MSK 2023:  Card data error
+1. Mon May 08 19:34:03 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Mon May 08 19:34:03 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+1. Mon May 08 19:57:44 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+2. Mon May 08 19:57:44 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 19:57:44 MSK 2023:  Confirmation ID - 0
+4. Mon May 08 19:57:44 MSK 2023:  Confirmation ID - 0
+5. Mon May 08 19:57:44 MSK 2023:  Transfer ID - 0
+6. Mon May 08 19:57:44 MSK 2023:  Transfer ID - 0
+1. Mon May 08 19:59:00 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+2. Mon May 08 19:59:00 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 19:59:00 MSK 2023:  Confirmation ID - 0
+4. Mon May 08 19:59:00 MSK 2023:  Confirmation ID - 0
+5. Mon May 08 19:59:00 MSK 2023:  Transfer ID - 0
+6. Mon May 08 19:59:00 MSK 2023:  Transfer ID - 0
+1. Mon May 08 19:59:15 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+2. Mon May 08 19:59:15 MSK 2023:  New card added to repositoryCard{number='111111111111111111', validTill='03/27', cvv='111', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 19:59:15 MSK 2023:  Card data error
+4. Mon May 08 19:59:15 MSK 2023:  Confirmation ID - 0
+5. Mon May 08 19:59:16 MSK 2023:  Confirmation ID - 0
+6. Mon May 08 19:59:16 MSK 2023:  Transfer ID - 0
+7. Mon May 08 19:59:16 MSK 2023:  Transfer ID - 0
+1. Mon May 08 19:59:33 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+2. Mon May 08 19:59:33 MSK 2023:  New card added to repositoryCard{number='111111111111111111', validTill='03/27', cvv='111', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 19:59:33 MSK 2023:  Card data error
+4. Mon May 08 19:59:33 MSK 2023:  Confirmation ID - 0
+5. Mon May 08 19:59:33 MSK 2023:  Added new EMPTY card
+6. Mon May 08 19:59:33 MSK 2023:  Added new EMPTY card
+1. Mon May 08 19:59:47 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+2. Mon May 08 19:59:47 MSK 2023:  New card added to repositoryCard{number='111111111111111111', validTill='03/27', cvv='111', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 19:59:47 MSK 2023:  Card data error
+4. Mon May 08 19:59:47 MSK 2023:  Confirmation ID - 0
+5. Mon May 08 19:59:47 MSK 2023:  Added new EMPTY card
+6. Mon May 08 19:59:47 MSK 2023:  Added new EMPTY card
+1. Mon May 08 20:00:06 MSK 2023:  New card added to repositoryCard{number='1234567890123456', validTill='12/25', cvv='123', balance=Amount{value=1000, currency='RUR'}}
+2. Mon May 08 20:00:06 MSK 2023:  New card added to repositoryCard{number='111111111111111111', validTill='03/27', cvv='111', balance=Amount{value=1000, currency='RUR'}}
+3. Mon May 08 20:00:06 MSK 2023:  Card data error
+4. Mon May 08 20:00:06 MSK 2023:  Confirmation ID - 0
+5. Mon May 08 20:00:06 MSK 2023:  Added new EMPTY card
+6. Mon May 08 20:00:06 MSK 2023:  Transfer ID - 0
