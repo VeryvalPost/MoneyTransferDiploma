@@ -2,26 +2,21 @@ package Netology.model;
 
 public class OperationID {
 
-    private String id;
+    private String operationId;
     private boolean success;
-    public OperationID(String operationId, boolean success) {
+    public OperationID(String operationId) {
 
-        this.id = operationId;
-        this.success = success;
+        this.operationId = operationId;
     }
 
     public String getId() {
-        return id;
-    }
-    public Boolean getSuccess() {
-        return success;
+        return operationId;
     }
 
     @Override
     public String toString() {
         return "OperationID{" +
-                "id='" + id + '\'' +
-                "success='" + success + '\'' +
+                "id='" + operationId + '\'' +
                 '}';
     }
 }

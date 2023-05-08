@@ -1,9 +1,14 @@
 package Netology.controller;
 
 import Netology.model.ConfirmationData;
+import Netology.model.LoggerClass;
+import Netology.model.OperationID;
 import Netology.model.TransferData;
 import Netology.service.Service;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,13 +23,15 @@ public class Controller {
 
 
     @PostMapping("/transfer")
-    public void transferToCard(@RequestBody TransferData transferData) {
-        service.transfer(transferData);
+    public OperationID transferToCard(@RequestBody TransferData transferData) {
+        LoggerClass.WriteLog("New transfer");
+        return service.transfer(transferData);
     }
 
     @PostMapping("/confirmOperation")
-    public void confirmOperation(@RequestBody ConfirmationData confirmationData) {
-        service.confirmation(confirmationData);
+    public OperationID confirmOperation(@RequestBody ConfirmationData confirmationData) {
+        LoggerClass.WriteLog("New confirmation");
+        return service.confirmation(confirmationData);
     }
 
 

@@ -33,4 +33,14 @@ public class Card {
     public void setBalance(Amount balance) {
         this.balance = balance;
     }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "number='" + number + '\'' +
+                ", validTill='" + validTill + '\'' +
+                ", cvv='" + cvv + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }

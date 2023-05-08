@@ -1,37 +1,41 @@
 package Netology.repository;
 
 
+import Netology.errors.DataError;
 import Netology.model.*;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
+
 
 @org.springframework.stereotype.Repository
 public class Repository {
     public Map<OperationID, TransferData> transferMap = new ConcurrentHashMap<>();
     public Map<OperationID, ConfirmationData> confirmationMap = new ConcurrentHashMap<>();
     public ArrayList<Card> cards = new ArrayList<>();
-    AtomicInteger id;
+    private int id=0;
 
 
 
-    public OperationID addTransferToRepo(TransferData transferData, Boolean success){
-        OperationID newOperation = new OperationID(String.valueOf(id.incrementAndGet()),success);
+    public OperationID addTransferToRepo(TransferData transferData){
+        OperationID newOperation = new OperationID(String.valueOf(id++));
         transferMap.put((newOperation),transferData);
+        LoggerClass.WriteLog("Transfer ID - " + newOperation.getId());
         return newOperation;
     }
 
-    public void addConfirmationToRepo(ConfirmationData confirmationData){
-        confirmationMap.put(new OperationID(String.valueOf(id.incrementAndGet()),true),confirmationData);
-        confirmationData.setCode(confirmationData.getOperationId());
+    public OperationID addConfirmationToRepo(ConfirmationData confirmationData){
+        OperationID newOperation = new OperationID(String.valueOf(id++));
+        confirmationMap.put(newOperation,confirmationData);
+        LoggerClass.WriteLog("Confirmation ID - " + newOperation.getId());
+        return newOperation;
     }
 
     public void addCardToRepo(String number, String validTill, String cvv, int value, String currency){
         Amount balance = new Amount(value,currency);
         Card newCard = new Card(number, validTill, cvv, balance);
+        LoggerClass.WriteLog("New card added to repository" + newCard.toString());
         cards.add(newCard);
     }
 
@@ -42,12 +46,17 @@ public class Repository {
                 return element;
             }
         }
-        return createNewCard(cardNumber);
+        throw new DataError("Card data error");
+
+
+
     }
 
     public Card createNewCard(String number){
         Card newCard = new Card(number, "00/00", "000",new Amount(0,"EMPTY"));
         cards.add(newCard);
+        LoggerClass.WriteLog("Added new EMPTY card");
+
         return newCard;
     }
 
