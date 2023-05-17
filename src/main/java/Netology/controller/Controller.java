@@ -1,7 +1,7 @@
 package Netology.controller;
 
 import Netology.model.ConfirmationData;
-import Netology.model.LoggerClass;
+import Netology.logger.LoggerClass;
 import Netology.model.OperationID;
 import Netology.model.TransferData;
 import Netology.service.Service;

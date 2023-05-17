@@ -1,6 +1,6 @@
 package Netology.errors;
 
-import Netology.model.LoggerClass;
+import Netology.logger.LoggerClass;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

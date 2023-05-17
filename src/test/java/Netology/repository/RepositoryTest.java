@@ -1,8 +1,8 @@
 package Netology.repository;
 
 import Netology.errors.DataError;
+import Netology.logger.LoggerClass;
 import Netology.model.*;
-import Netology.service.Service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -11,7 +11,6 @@ import org.mockito.MockitoAnnotations;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 
 public class RepositoryTest {

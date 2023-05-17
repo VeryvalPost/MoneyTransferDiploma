@@ -1,5 +1,10 @@
 package Netology.model;
 
+import Netology.errors.DataError;
+import Netology.repository.Repository;
+
+import java.util.Calendar;
+
 public class Card {
     private final String number;
     private final String validTill;
@@ -43,4 +48,5 @@ public class Card {
                 ", balance=" + balance +
                 '}';
     }
+
 }

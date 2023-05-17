@@ -1,4 +1,4 @@
-package Netology.model;
+package Netology.logger;
 
 import java.io.FileWriter;
 import java.io.IOException;
