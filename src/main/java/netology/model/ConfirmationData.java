@@ -1,4 +1,4 @@
-package Netology.model;
+package netology.model;
 
 public class ConfirmationData {
     private final String operationId;

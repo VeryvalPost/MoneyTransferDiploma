@@ -1,8 +1,8 @@
-package Netology.model;
+package netology.model;
 
 public class Amount {
-    protected int value;
-    protected String currency;
+    private int value;
+    private String currency;
 
     public Amount(int value, String currency) {
         this.value = value;

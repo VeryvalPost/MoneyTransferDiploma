@@ -1,37 +1,35 @@
-package Netology.controller;
+package netology.controller;
 
-import Netology.model.ConfirmationData;
-import Netology.logger.LoggerClass;
-import Netology.model.OperationID;
-import Netology.model.TransferData;
-import Netology.service.Service;
-
+import netology.model.ConfirmationData;
+import netology.logger.LoggerClass;
+import netology.model.OperationID;
+import netology.model.TransferData;
+import netology.service.CardService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
 @CrossOrigin
 @RestController
-public class Controller {
-    Service service;
+public class TransferServController {
+    private final CardService cardService;
 
-    public Controller(Service service) {
-        this.service = service;
+    public TransferServController(CardService cardService) {
+        this.cardService = cardService;
     }
-
 
     @PostMapping("/transfer")
     public OperationID transferToCard(@RequestBody TransferData transferData) {
         LoggerClass.WriteLog("New transfer");
-        return service.transfer(transferData);
+        return cardService.transfer(transferData);
     }
 
     @PostMapping("/confirmOperation")
     public OperationID confirmOperation(@RequestBody ConfirmationData confirmationData) {
         LoggerClass.WriteLog("New confirmation");
-        return service.confirmation(confirmationData);
+        return cardService.confirmation(confirmationData);
     }
-
 
 
 }

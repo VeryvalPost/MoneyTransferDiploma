@@ -1,6 +1,6 @@
-package Netology.errors;
+package netology.errors;
 
-import Netology.logger.LoggerClass;
+import netology.logger.LoggerClass;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -8,6 +8,5 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class DataError extends RuntimeException{
     public DataError(String msg) {
         super(msg);
-        LoggerClass.WriteLog(msg);
     }
 }

@@ -1,23 +1,22 @@
-package Netology.service;
+package netology.service;
 
-import Netology.errors.ConfirmError;
-import Netology.errors.DataError;
-import Netology.errors.TransferError;
-import Netology.logger.LoggerClass;
-import Netology.model.*;
-import Netology.repository.Repository;
+import netology.errors.ConfirmError;
+import netology.errors.TransferError;
+import netology.logger.LoggerClass;
+import netology.model.*;
+import netology.repository.OperationRepository;
+import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
 
-@org.springframework.stereotype.Service
-public class Service {
+@Service
+public class CardService {
 
-    Repository repository;
-    Card cardTest1 = new Card("1111111111111111", "03/27", "111", new Amount(5000, "RUB"));
-    Card cardTest2 = new Card("2222222222222222", "02/29", "222", new Amount(1000, "RUB"));
+    private final OperationRepository repository;
+
+
     static LoggerClass log = new LoggerClass();
 
-    public Service(Repository repository) {
+    public CardService(OperationRepository repository) {
 
         this.repository = repository;
         // заполнение тестовыми данными
@@ -26,16 +25,17 @@ public class Service {
     }
 
     public OperationID transfer(TransferData transferData) {
+        ValidationService validator = new ValidationService(repository);
         String cardFromNumber = transferData.getCardFromNumber();
         String cardFromTill = transferData.getCardFromValidTill();
         String cardFromCVV = transferData.getCardFromCVV();
         String cardToNumber = transferData.getCardToNumber();
         Amount amount = transferData.getAmount();
 
-        if ((repository.checkBalance(cardFromNumber, amount))
-                && (repository.checkCardExist(cardFromNumber))
-                && (repository.checkCardExist(cardToNumber))
-                && (repository.checkCardData(cardFromNumber, cardFromTill, cardFromCVV))) {
+        if ((validator.checkBalance(cardFromNumber, amount, repository.getCard(cardFromNumber)))
+                && (validator.checkCardExist(cardFromNumber, repository))
+                && (validator.checkCardExist(cardToNumber, repository))
+                ) {
             //увеличиваем денежную сумму на карте на заданную величну
             Amount transferAmount = repository.getCard(cardToNumber).getBalance();
             transferAmount.setValue(transferAmount.getValue() + amount.getValue());
@@ -49,7 +49,7 @@ public class Service {
                     "Current balance: " + repository.getCard(cardFromNumber).getBalance() + "\n" +
                     "Commission: " + percent);
 
-        } else throw new TransferError("Transfer Error. Not enough money");
+        } else throw new TransferError("Transfer not correct.");
 
 
         return repository.addTransferToRepo(transferData);
@@ -58,20 +58,6 @@ public class Service {
     public OperationID confirmation(ConfirmationData confirmationData) {
 
         boolean confSuccess = false;
-
-        // на стороне FRONT организована другая поцедура проверки. В данный момент приложение высылает по умолчанию код "0000"
-        /*
-        for (OperationID elem : repository.transferMap.keySet()
-        ) {
-            if (elem.getId().equals(confirmationData.getOperationId())) {
-                confSuccess = true;
-                log.WriteLog("Confirm Success");
-                return repository.addConfirmationToRepo(confirmationData);
-            }
-        }
-        */
-
-        // изменил проверк под конкретную задачу.
 
         if (confirmationData.getCode().equals("0000")) {
             confSuccess = true;

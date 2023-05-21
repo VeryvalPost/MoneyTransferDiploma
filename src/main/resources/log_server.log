@@ -1,61 +1,80 @@
-6. Wed May 17 22:19:13 MSK 2023:  New transfer
-7. Wed May 17 22:19:13 MSK 2023:  
+1. Sun May 21 23:16:55 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Sun May 21 23:16:55 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Sun May 21 23:17:03 MSK 2023:  New transfer
+4. Sun May 21 23:17:03 MSK 2023:  
+Balance 2222222222222222 increased by 800RUR
+From 1111111111111111
+Current balance: Amount{value=4192, currency='RUR'}
+Commission: 8
+5. Sun May 21 23:17:03 MSK 2023:  Transfer ID - 1
+6. Sun May 21 23:17:09 MSK 2023:  New transfer
+7. Sun May 21 23:17:09 MSK 2023:  Card not found
+8. Sun May 21 23:17:09 MSK 2023:  Not corrected card data: Card not found
+9. Sun May 21 23:17:19 MSK 2023:  New transfer
+10. Sun May 21 23:17:19 MSK 2023:  
+Balance 2222222222222222 increased by 600RUR
+From 1111111111111111
+Current balance: Amount{value=3586, currency='RUR'}
+Commission: 6
+11. Sun May 21 23:17:19 MSK 2023:  Transfer ID - 2
+12. Sun May 21 23:17:26 MSK 2023:  New transfer
+13. Sun May 21 23:17:26 MSK 2023:  Card doesn't exist:2222222222222221
+14. Sun May 21 23:17:26 MSK 2023:  Not corrected card data: Card doesn't exist:2222222222222221
+15. Sun May 21 23:17:37 MSK 2023:  New transfer
+16. Sun May 21 23:17:37 MSK 2023:  
 Balance 2222222222222222 increased by 500RUR
 From 1111111111111111
-Current balance: Amount{value=3990, currency='RUR'}
+Current balance: Amount{value=3081, currency='RUR'}
 Commission: 5
-8. Wed May 17 22:19:13 MSK 2023:  Transfer ID - 1
-9. Wed May 17 22:19:32 MSK 2023:  New transfer
-10. Wed May 17 22:19:32 MSK 2023:  Card data error
-11. Wed May 17 22:19:32 MSK 2023:  Not corrected card data: Card data error
-12. Wed May 17 22:20:19 MSK 2023:  New transfer
-13. Wed May 17 22:20:19 MSK 2023:  Transfer Error. Not enough money
-14. Wed May 17 22:20:19 MSK 2023:  Transfer error: Transfer Error. Not enough money
-15. Wed May 17 22:20:56 MSK 2023:  New transfer
-16. Wed May 17 22:20:56 MSK 2023:  
-Balance 2222222222222222 increased by 800RUR
+17. Sun May 21 23:17:37 MSK 2023:  Transfer ID - 3
+1. Sun May 21 23:18:48 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Sun May 21 23:18:48 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Sun May 21 23:18:53 MSK 2023:  New transfer
+4. Sun May 21 23:18:53 MSK 2023:  
+Balance 2222222222222222 increased by 500RUR
 From 1111111111111111
-Current balance: Amount{value=3182, currency='RUR'}
-Commission: 8
-17. Wed May 17 22:20:56 MSK 2023:  Transfer ID - 2
-1. Wed May 17 22:31:24 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
-2. Wed May 17 22:31:24 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
-3. Wed May 17 22:31:30 MSK 2023:  New transfer
-4. Wed May 17 22:31:30 MSK 2023:  
-Balance 2222222222222222 increased by 800RUR
+Current balance: Amount{value=4495, currency='RUR'}
+Commission: 5
+5. Sun May 21 23:18:53 MSK 2023:  Transfer ID - 1
+6. Sun May 21 23:18:57 MSK 2023:  New transfer
+7. Sun May 21 23:18:57 MSK 2023:  
+Balance 2222222222222222 increased by 1500RUR
 From 1111111111111111
-Current balance: Amount{value=4192, currency='RUR'}
-Commission: 8
-1. Wed May 17 22:33:27 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
-2. Wed May 17 22:33:27 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
-3. Wed May 17 22:33:37 MSK 2023:  New transfer
-4. Wed May 17 22:33:37 MSK 2023:  
-Balance 2222222222222222 increased by 800RUR
+Current balance: Amount{value=2980, currency='RUR'}
+Commission: 15
+8. Sun May 21 23:18:57 MSK 2023:  Transfer ID - 2
+9. Sun May 21 23:19:04 MSK 2023:  New transfer
+10. Sun May 21 23:19:04 MSK 2023:  Not corrected card data: Card not found
+1. Sun May 21 23:27:47 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
+2. Sun May 21 23:27:47 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+3. Sun May 21 23:28:31 MSK 2023:  New transfer
+4. Sun May 21 23:28:31 MSK 2023:  Not corrected card data: Card1111111111111113 not found
+5. Sun May 21 23:28:36 MSK 2023:  New transfer
+6. Sun May 21 23:28:36 MSK 2023:  
+Balance 2222222222222222 increased by 1500RUR
 From 1111111111111111
-Current balance: Amount{value=4192, currency='RUR'}
-Commission: 8
-5. Wed May 17 22:33:37 MSK 2023:  Transfer ID - 1
-1. Wed May 17 22:58:45 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
-2. Wed May 17 22:58:45 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
-3. Wed May 17 22:58:49 MSK 2023:  New transfer
-4. Wed May 17 22:58:49 MSK 2023:  
-Balance 2222222222222222 increased by 800RUR
+Current balance: Amount{value=3485, currency='RUR'}
+Commission: 15
+7. Sun May 21 23:28:36 MSK 2023:  Transfer ID - 1
+8. Sun May 21 23:28:40 MSK 2023:  New transfer
+9. Sun May 21 23:28:40 MSK 2023:  Not corrected card data: Not enough money. Card:1111111111111111
+10. Sun May 21 23:28:49 MSK 2023:  New transfer
+11. Sun May 21 23:28:49 MSK 2023:  Not corrected card data: Card doesn't exist:2222222222222223
+12. Sun May 21 23:28:53 MSK 2023:  New transfer
+13. Sun May 21 23:28:53 MSK 2023:  Not corrected card data: Card doesn't exist:2222222222222221
+14. Sun May 21 23:28:57 MSK 2023:  New confirmation
+15. Sun May 21 23:28:57 MSK 2023:  Confirmation errorConfirm Error. Confirmation not exist
+16. Sun May 21 23:29:02 MSK 2023:  New confirmation
+17. Sun May 21 23:29:02 MSK 2023:  Confirm Success
+18. Sun May 21 23:29:02 MSK 2023:  Confirmation ID - 2
+19. Sun May 21 23:29:13 MSK 2023:  New transfer
+20. Sun May 21 23:29:13 MSK 2023:  Not corrected card data: Card doesn't exist:2222222222222221
+21. Sun May 21 23:29:21 MSK 2023:  New transfer
+22. Sun May 21 23:29:21 MSK 2023:  
+Balance 2222222222222222 increased by 2500RUR
 From 1111111111111111
-Current balance: Amount{value=4192, currency='RUR'}
-Commission: 8
-5. Wed May 17 22:58:49 MSK 2023:  Transfer ID - 1
-6. Wed May 17 22:58:56 MSK 2023:  New transfer
-7. Wed May 17 22:58:56 MSK 2023:  Card data error
-8. Wed May 17 22:58:56 MSK 2023:  Not corrected card data: Card data error
-9. Wed May 17 22:59:03 MSK 2023:  New transfer
-10. Wed May 17 22:59:03 MSK 2023:  Transfer Error. Not enough money
-11. Wed May 17 22:59:03 MSK 2023:  Transfer error: Transfer Error. Not enough money
-12. Wed May 17 22:59:44 MSK 2023:  New transfer
-13. Wed May 17 22:59:44 MSK 2023:  
-Balance 2222222222222222 increased by 80RUR
-From 1111111111111111
-Current balance: Amount{value=4112, currency='RUR'}
-Commission: 0
-14. Wed May 17 22:59:44 MSK 2023:  Transfer ID - 2
-1. Wed May 17 23:05:49 MSK 2023:  New card added to repositoryCard{number='1111111111111111', validTill='03/27', cvv='111', balance=Amount{value=5000, currency='RUR'}}
-2. Wed May 17 23:05:49 MSK 2023:  New card added to repositoryCard{number='2222222222222222', validTill='02/29', cvv='222', balance=Amount{value=1000, currency='RUR'}}
+Current balance: Amount{value=960, currency='RUR'}
+Commission: 25
+23. Sun May 21 23:29:21 MSK 2023:  Transfer ID - 3
+24. Sun May 21 23:29:23 MSK 2023:  New transfer
+25. Sun May 21 23:29:23 MSK 2023:  Not corrected card data: Not enough money. Card:1111111111111111

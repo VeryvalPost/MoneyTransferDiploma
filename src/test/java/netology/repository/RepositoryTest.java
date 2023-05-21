@@ -1,8 +1,8 @@
-package Netology.repository;
+package netology.repository;
 
-import Netology.errors.DataError;
-import Netology.logger.LoggerClass;
-import Netology.model.*;
+import netology.errors.DataError;
+import netology.logger.LoggerClass;
+import netology.model.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -19,13 +19,13 @@ public class RepositoryTest {
     public LoggerClass logger;
 
     @InjectMocks
-    public Repository repository;
+    public OperationRepository repository;
 
 
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        repository = new Repository();
+        repository = new OperationRepository();
     }
     @Test
     public void testAddTransferToRepo() {

@@ -1,7 +1,7 @@
-package Netology.service;
+package netology.service;
 
-import Netology.model.*;
-import Netology.repository.Repository;
+import netology.model.*;
+import netology.repository.OperationRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -11,20 +11,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
-public class ServiceTest {
+public class CardServiceTest {
     @Mock
-    Repository repository;
+    OperationRepository repository;
 
     @Mock
     TransferData transferData;
 
     @InjectMocks
-    Service service;
+    CardService cardService;
 
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        service = new Service(repository);
+        cardService = new CardService(repository);
     }
 
     @Test
@@ -57,11 +57,10 @@ public class ServiceTest {
         when(repository.addTransferToRepo(any(TransferData.class))).thenReturn(new OperationID("1"));
 
         // Testing the transfer method
-        OperationID operationID = service.transfer(transferData);
+        OperationID operationID = cardService.transfer(transferData);
         assertNotNull(operationID);
         assertEquals(operationID.getClass(), OperationID.class);
-       // verify(repository, times(2)).getCard(anyString());
-       // verify(repository, times(1)).addTransferToRepo(any(TransferData.class));
+
     }
 
     @Test
@@ -75,7 +74,7 @@ public class ServiceTest {
         when(repository.addConfirmationToRepo(any(ConfirmationData.class))).thenReturn(new OperationID("1"));
 
         // Testing the confirmation method
-        OperationID operationID = service.confirmation(confirmationData);
+        OperationID operationID = cardService.confirmation(confirmationData);
         assertNotNull(operationID);
         assertEquals(operationID.getClass(), OperationID.class);
         verify(repository, times(1)).addConfirmationToRepo(any(ConfirmationData.class));

@@ -1,9 +1,4 @@
-package Netology.model;
-
-import Netology.errors.DataError;
-import Netology.repository.Repository;
-
-import java.util.Calendar;
+package netology.model;
 
 public class Card {
     private final String number;
