@@ -7,13 +7,9 @@ import netology.model.*;
 import netology.repository.OperationRepository;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class CardService {
-
     private final OperationRepository repository;
-
-
     static LoggerClass log = new LoggerClass();
 
     public CardService(OperationRepository repository) {
@@ -35,14 +31,14 @@ public class CardService {
         if ((validator.checkBalance(cardFromNumber, amount, repository.getCard(cardFromNumber)))
                 && (validator.checkCardExist(cardFromNumber, repository))
                 && (validator.checkCardExist(cardToNumber, repository))
-                ) {
+        ) {
             //увеличиваем денежную сумму на карте на заданную величну
             Amount transferAmount = repository.getCard(cardToNumber).getBalance();
             transferAmount.setValue(transferAmount.getValue() + amount.getValue());
             //уменьшаем баланс исходной карты
             Amount decrease = repository.getCard(cardFromNumber).getBalance();
-            int percent = (int)(amount.getValue()*0.01);
-            decrease.setValue(decrease.getValue() - amount.getValue()-percent);
+            int percent = (int) (amount.getValue() * 0.01);
+            decrease.setValue(decrease.getValue() - amount.getValue() - percent);
             log.WriteLog("\n" + "Balance " + cardToNumber + " increased by " +
                     amount.getValue() + amount.getCurrency() + "\n" +
                     "From " + cardFromNumber + "\n" +
@@ -50,8 +46,6 @@ public class CardService {
                     "Commission: " + percent);
 
         } else throw new TransferError("Transfer not correct.");
-
-
         return repository.addTransferToRepo(transferData);
     }
 
@@ -67,8 +61,4 @@ public class CardService {
 
         throw new ConfirmError("Confirm Error. Confirmation not exist");
     }
-
-
-
-
 }

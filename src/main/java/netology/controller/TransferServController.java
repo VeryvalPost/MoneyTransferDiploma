@@ -5,6 +5,7 @@ import netology.logger.LoggerClass;
 import netology.model.OperationID;
 import netology.model.TransferData;
 import netology.service.CardService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,16 +21,14 @@ public class TransferServController {
     }
 
     @PostMapping("/transfer")
-    public OperationID transferToCard(@RequestBody TransferData transferData) {
-        LoggerClass.WriteLog("New transfer");
-        return cardService.transfer(transferData);
+    public ResponseEntity<OperationID> transferToCard(@RequestBody TransferData transferData) {
+        LoggerClass.WriteLog("New transfer:" + transferData.toString());
+        return ResponseEntity.ok(cardService.transfer(transferData));
     }
 
     @PostMapping("/confirmOperation")
-    public OperationID confirmOperation(@RequestBody ConfirmationData confirmationData) {
-        LoggerClass.WriteLog("New confirmation");
-        return cardService.confirmation(confirmationData);
+    public ResponseEntity<OperationID> confirmOperation(@RequestBody ConfirmationData confirmationData) {
+        LoggerClass.WriteLog("New confirmation:" + confirmationData.toString());
+        return ResponseEntity.ok(cardService.confirmation(confirmationData));
     }
-
-
 }

@@ -4,7 +4,6 @@ import netology.errors.DataError;
 import netology.logger.LoggerClass;
 import netology.model.*;
 import org.springframework.stereotype.Repository;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -48,8 +47,6 @@ public class OperationRepository {
             }
         }
         throw new DataError("Card" + cardNumber + " not found");
-
-
     }
 
     public Card createNewCard(String number) {
@@ -59,5 +56,4 @@ public class OperationRepository {
 
         return newCard;
     }
-
 }

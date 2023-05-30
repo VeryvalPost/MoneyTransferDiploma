@@ -4,6 +4,7 @@ public class OperationID {
 
     private String operationId;
     private boolean success;
+
     public OperationID(String operationId) {
 
         this.operationId = operationId;

@@ -4,9 +4,7 @@ import netology.errors.DataError;
 import netology.model.Amount;
 import netology.model.Card;
 import netology.repository.OperationRepository;
-
 import java.util.Map;
-
 
 public class ValidationService {
 
